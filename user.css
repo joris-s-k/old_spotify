@@ -51,11 +51,6 @@
     width: 85%;
 }
 
-.main-rootlist-wrapper
-{
-  --row-height:32px !important;
-}
-
 /*Move "Title" from center to left*/
 .main-trackList-column
 {
