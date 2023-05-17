@@ -1,0 +1,131 @@
+/* Write your css herehttps://open.spotify.com/user/l4std3cisi0n/collection :D */
+
+/*hide cover image in playlists*/
+.main-trackList-rowImage
+{
+  display:none;
+  height: 1px;
+  width: 1px;
+}
+
+/*display artist after title instead of below*/
+.main-trackList-rowMainContent
+{
+  grid-template: "title badges subtitle"/auto 18px 35%
+  
+}
+
+.main-trackList-rowSubTitle
+{
+  grid-column-start: 3;
+}
+
+/*more space for title/artist and less for time added and length*/
+.main-trackList-trackList.main-trackList-indexable[aria-colcount="4"]
+.main-trackList-trackListRowGrid
+{
+  grid-template-columns: [index] 16px [first] 12fr [var1] 3fr [last] minmax(80px,0.5fr);
+}
+
+
+.main-trackList-trackList.main-trackList-indexable[aria-colcount="5"]
+.main-trackList-trackListRowGrid
+{
+  grid-template-columns: [index] 16px [first] 12fr [var1] 4fr [var2] minmax(100px,0.5fr) [last] minmax(80px,0.5fr);
+}
+
+.main-trackList-trackList.main-trackList-indexable[aria-colcount="6"] .main-trackList-trackListRowGrid {
+    
+    grid-template-columns: [index] 16px [first] 12fr [var1] 4fr [var2] minmax(120px,0.5fr) [var3] minmax(160px,0.5fr) [last] minmax(80px,0.5fr);
+}
+
+/*reduce row height, add divider lines*/
+.main-trackList-trackListRow, .main-trackList-trackListRowGrid
+{
+  height:40px;
+  border-bottom-color:#272727;
+}
+
+.main-trackList-rowSectionIndex, .main-trackList-rowSectionStart {
+    display:grid;
+    width: 85%;
+}
+
+.main-rootlist-wrapper
+{
+  --row-height:32px !important;
+}
+
+/*Move "Title" from center to left*/
+.main-trackList-column
+{
+  justify-content:left;
+}
+
+/*same color/font size for title/artist/album*/
+.main-trackList-rowSectionVariable a, 
+.main-trackList-rowSubTitle a {
+    color: var(--spice-text) !important;
+}
+
+.main-trackList-rowTitle
+{
+  font-size: 14px;
+}
+
+/*remove playlist color gradient*/
+.main-entityHeader-backgroundColor {
+    background-color: inherit !important;
+    background-image: unset !important;
+}
+.main-actionBarBackground-background {
+    background-color: inherit !important;
+    background-image: unset !important;
+}
+
+/*remove top bar color gradient*/
+.main-topBar-background {
+  background-color: var(--spice-main) !important;
+}
+
+/*smaller play button in top bar*/
+.ButtonInner-md-iconOnly {
+    min-block-size: 32px;
+    inline-size: 32px;
+    block-size: 32px;
+}
+
+.ButtonInner-md-iconOnly span
+{
+  position: unset !important;
+}
+
+/*color artist/album green on current track*/
+.main-trackList-trackListRow.main-trackList-active .main-trackList-rowMarker, 
+.main-trackList-trackListRow.main-trackList-active .main-trackList-rowTitle,
+.main-trackList-trackListRow.main-trackList-active .main-trackList-rowSubTitle a,
+.main-trackList-trackListRow.main-trackList-active .TypeElement-mesto-type a
+{
+    color: var(--text-bright-accent) !important;
+}
+
+/*left aligned heart*/
+.main-trackList-rowSectionStart {
+  margin-left: 32px !important;
+}
+.main-addButton-button.main-trackList-rowHeartButton,
+.main-addButton-button.main-trackList-rowHeartButton {
+  position: absolute !important;
+  left: 48px !important;
+}
+
+/*grey heart*/
+.main-addButton-active{
+  color: var(--spice-subtext) !important;
+}
+
+/*black notification text*/
+.main-notificationBubble-NotificationBubble
+{
+  color: #000000;
+}
