@@ -136,3 +136,28 @@
 .main-rootlist-rootlistDividerGradient {
   background-image: unset !important;
 }
+
+/*smaller playlist title*/
+.main-entityHeader-title h1
+{
+  font-size: 3.5rem !important;
+  font-weight: 100;
+}
+
+/*smaller playlist image*/
+.playlist-playlist-playlistImageContainer {
+    height: 210px;
+    min-width: 210px;
+    width: 210px;
+}
+
+.main-entityHeader-container.main-entityHeader-nonWrapped {
+    min-height: 210px;
+}
+
+/*increased visibility of text in playlist description*/
+.playlist-playlist-playlistDescription,
+.main-entityHeader-metaDataText span
+{
+  color: var(--text-subdued);
+}
