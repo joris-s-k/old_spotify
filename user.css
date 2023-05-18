@@ -1,5 +1,3 @@
-/* Write your css herehttps://open.spotify.com/user/l4std3cisi0n/collection :D */
-
 /*hide cover image in playlists*/
 .main-trackList-rowImage
 {
@@ -123,4 +121,10 @@
 .main-notificationBubble-NotificationBubble
 {
   color: #000000;
+}
+
+/*hide gradient above playlist list*/
+.main-rootlist-rootlistDividerGradient
+{
+  display:none;
 }
