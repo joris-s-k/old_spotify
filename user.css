@@ -124,3 +124,8 @@
 {
   color: #000000;
 }
+
+/*remove sidebar divider gradient*/
+.main-rootlist-rootlistDividerGradient {
+  background-image: unset !important;
+}
