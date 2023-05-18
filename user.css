@@ -161,3 +161,38 @@
 {
   color: var(--text-subdued);
 }
+
+:root{
+  --playButton-width: 88px
+}
+
+/*adjust margin of play button*/
+.main-actionBar-ActionBar .main-playButton-PlayButton
+{
+  margin-right: calc(32px + var(--playButton-width) - 56px) !important;
+
+}
+
+/*adjust size/shape of play button*/
+.main-actionBar-ActionBar .ButtonInner-lg-iconOnly
+{
+    min-block-size: 32px;
+    inline-size: var(--playButton-width);
+    block-size: 32px;
+}
+
+.main-actionBar-ActionBar .ButtonInner-lg-iconOnly span
+{
+    position: unset !important;
+}
+
+/*reduce height of action bar*/
+.os-content-glue{
+  height: auto;
+}
+
+.main-actionBar-ActionBar
+{
+  padding-top:0px !important;
+  padding-bottom:0px !important;
+}                                   
