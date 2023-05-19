@@ -234,3 +234,10 @@
   position:relative;
   top:6px;
 }
+
+/*darker background for Now Playing/Friend Activity sidebars*/
+.main-nowPlayingView-container,
+.main-buddyFeed-container
+{
+    background: var(--spice-sidebar);
+}
