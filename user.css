@@ -11,8 +11,6 @@
 /*hide cover image in playlists*/
 .main-trackList-rowImage {
   display: none;
-  height: 1px;
-  width: 1px;
 }
 
 /*display artist after title instead of below*/
@@ -235,6 +233,44 @@
 
 
 
+/*** ARTIST PAGE ***/
+
+/*show album covers in popular song list on artist pages*/
+.artist-artistOverview-artistOverviewContainer .main-trackList-rowImage {
+  display:grid;
+}
+
+.artist-artistOverview-artistOverviewContainer .main-trackList-rowSectionStart {
+  grid-template-columns: 50px auto;
+}
+
+/*adjust spacing of columns*/
+.artist-artistOverview-artistOverviewContainer .main-trackList-trackList.main-trackList-indexable[aria-colcount="4"] .main-trackList-trackListRowGrid {
+  grid-template-columns: [index] 16px [first] 60% [var1] auto [last] 80px;
+}
+
+.artist-artistOverview-artistOverviewContainer .main-trackList-rowMainContent {
+    grid-template: "title badges " /auto 18px;
+}
+
+/*width of title+badge*/
+.artist-artistOverview-artistOverviewContainer .main-trackList-rowSectionStart {
+  display: grid;
+  width: 60%;
+}
+
+/*heart visible*/
+.artist-artistOverview-artistOverviewContainer .main-trackList-rowHeartButton[aria-checked=false] {
+  opacity: unset;
+}
+
+/*extra space between play button and top banner*/
+.artist-artistOverview-overview .os-content-glue {
+  margin: 10px !important;
+}
+
+
+
 /*** MISC ***/
 
 /*black notification text*/
@@ -248,3 +284,4 @@
 .main-buddyFeed-container {
   background: var(--spice-sidebar);
 }
+
