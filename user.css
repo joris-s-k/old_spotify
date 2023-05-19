@@ -1,7 +1,8 @@
 :root{
-  --playButton-width: 88px
-  --new-Rowheight: 41px
+  --playButton-width: 88px;
+  --new-Rowheight: 41px;
 }
+
 /*hide cover image in playlists*/
 .main-trackList-rowImage
 {
