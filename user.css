@@ -1,5 +1,5 @@
 /*** VARIABLES ***/
-:root{
+:root {
   --playButton-width: 88px;
   --new-Rowheight: 41px;
 }
@@ -9,49 +9,41 @@
 /*** PLAYLIST CONTENT ***/
 
 /*hide cover image in playlists*/
-.main-trackList-rowImage
-{
-  display:none;
+.main-trackList-rowImage {
+  display: none;
   height: 1px;
   width: 1px;
 }
 
 /*display artist after title instead of below*/
-.main-trackList-rowMainContent
-{
-  grid-template: "title badges subtitle"/auto 18px 35%
-  
+.main-trackList-rowMainContent {
+  grid-template: "title badges subtitle" /auto 18px 35%
 }
 
-.main-trackList-rowSubTitle
-{
+.main-trackList-rowSubTitle {
   grid-column-start: 3;
 }
 
 /*more space for title/artist and less for time added and length*/
-.main-trackList-trackList.main-trackList-indexable[aria-colcount="4"]
-.main-trackList-trackListRowGrid
-{
-  grid-template-columns: [index] 16px [first] 12fr [var1] 3fr [last] minmax(80px,0.5fr);
+.main-trackList-trackList.main-trackList-indexable[aria-colcount="4"] .main-trackList-trackListRowGrid {
+  grid-template-columns: [index] 16px [first] 12fr [var1] 3fr [last] minmax(80px, 0.5fr);
 }
 
 
-.main-trackList-trackList.main-trackList-indexable[aria-colcount="5"]
-.main-trackList-trackListRowGrid
-{
-  grid-template-columns: [index] 16px [first] 12fr [var1] 4fr [var2] minmax(100px,0.5fr) [last] minmax(80px,0.5fr);
+.main-trackList-trackList.main-trackList-indexable[aria-colcount="5"] .main-trackList-trackListRowGrid {
+  grid-template-columns: [index] 16px [first] 12fr [var1] 4fr [var2] minmax(100px, 0.5fr) [last] minmax(80px, 0.5fr);
 }
 
 .main-trackList-trackList.main-trackList-indexable[aria-colcount="6"] .main-trackList-trackListRowGrid {
-    
-    grid-template-columns: [index] 16px [first] 12fr [var1] 4fr [var2] minmax(120px,0.5fr) [var3] minmax(160px,0.5fr) [last] minmax(80px,0.5fr);
+
+  grid-template-columns: [index] 16px [first] 12fr [var1] 4fr [var2] minmax(120px, 0.5fr) [var3] minmax(160px, 0.5fr) [last] minmax(80px, 0.5fr);
 }
 
 /*reduce row height, add divider lines*/
-.main-trackList-trackListRow, .main-trackList-trackListRowGrid
-{
-  height:var(--new-Rowheight);
-  border-bottom-color:#272727;
+.main-trackList-trackListRow,
+.main-trackList-trackListRowGrid {
+  height: var(--new-Rowheight);
+  border-bottom-color: #272727;
 }
 
 /*make first row appear the same height*/
@@ -63,34 +55,33 @@
 
 /*expand title/artist to uniform length in grid slot for all rows*/
 .main-trackList-rowSectionStart {
-    display:grid;
-    width: 85%;
+  display: grid;
+  width: 85%;
 }
 
 /*same color/font size for title/artist/album*/
-.main-trackList-rowSectionVariable a, 
+.main-trackList-rowSectionVariable a,
 .main-trackList-rowSubTitle a {
-    color: var(--spice-text) !important;
+  color: var(--spice-text) !important;
 }
 
-.main-trackList-rowTitle
-{
+.main-trackList-rowTitle {
   font-size: 14px;
 }
 
 /*color artist/album green on current track*/
-.main-trackList-trackListRow.main-trackList-active .main-trackList-rowMarker, 
+.main-trackList-trackListRow.main-trackList-active .main-trackList-rowMarker,
 .main-trackList-trackListRow.main-trackList-active .main-trackList-rowTitle,
 .main-trackList-trackListRow.main-trackList-active .main-trackList-rowSubTitle a,
-.main-trackList-trackListRow.main-trackList-active .TypeElement-mesto-type a
-{
-    color: var(--text-bright-accent) !important;
+.main-trackList-trackListRow.main-trackList-active .TypeElement-mesto-type a {
+  color: var(--text-bright-accent) !important;
 }
 
 /*left aligned heart*/
 .main-trackList-rowSectionStart {
   margin-left: 32px !important;
 }
+
 .main-addButton-button.main-trackList-rowHeartButton,
 .main-addButton-button.main-trackList-rowHeartButton {
   position: absolute !important;
@@ -98,7 +89,7 @@
 }
 
 /*grey heart*/
-.main-addButton-active{
+.main-addButton-active {
   color: var(--spice-subtext) !important;
 }
 
@@ -112,8 +103,9 @@
 }
 
 /*replace color of selected row*/
-.main-trackList-trackListRow.main-trackList-selected, .main-trackList-trackListRow.main-trackList-selected:hover {
-  background-color: rgba(var(--spice-rgb-new-selected-row),.3);
+.main-trackList-trackListRow.main-trackList-selected,
+.main-trackList-trackListRow.main-trackList-selected:hover {
+  background-color: rgba(var(--spice-rgb-new-selected-row), .3);
 }
 
 
@@ -121,34 +113,30 @@
 /*** PLAYLIST COLUMN HEADERS ***/
 
 /*Move "Title" from center to left*/
-.main-trackList-column
-{
-  justify-content:left;
+.main-trackList-column {
+  justify-content: left;
 }
 
 /*use old font design for playlist type/column headers*/
-.main-trackList-trackListHeader span
-{
-  text-transform:uppercase !important;
-  letter-spacing:1.5px;
-  font-size:.6815rem;
+.main-trackList-trackListHeader span {
+  text-transform: uppercase !important;
+  letter-spacing: 1.5px;
+  font-size: .6815rem;
 }
 
-.main-entityHeader-headerText .TypeElement-mestoBold-type:first-child
-{
-  text-transform:uppercase !important;
-  letter-spacing:1.5px;
-  font-size:.6815rem;
+.main-entityHeader-headerText .TypeElement-mestoBold-type:first-child {
+  text-transform: uppercase !important;
+  letter-spacing: 1.5px;
+  font-size: .6815rem;
   font-weight: lighter;
 }
 
 /*adjust header position*/
 .main-trackList-trackListHeader .main-trackList-rowSectionIndex,
 .main-trackList-trackListHeader .main-trackList-playsHeader,
-.main-trackList-column
-{
-  position:relative;
-  top:6px;
+.main-trackList-column {
+  position: relative;
+  top: 6px;
 }
 
 
@@ -157,76 +145,68 @@
 
 /*smaller play button in top bar*/
 .ButtonInner-md-iconOnly {
-    min-block-size: 32px;
-    inline-size: 32px;
-    block-size: 32px;
+  min-block-size: 32px;
+  inline-size: 32px;
+  block-size: 32px;
 }
 
-.ButtonInner-md-iconOnly span
-{
+.ButtonInner-md-iconOnly span {
   position: unset !important;
 }
 
 /*smaller playlist title*/
-.main-entityHeader-title h1
-{
-  font-size: 2.975rem !important; 
+.main-entityHeader-title h1 {
+  font-size: 2.975rem !important;
   font-weight: 100;
 }
 
 /*smaller playlist image*/
 .playlist-playlist-playlistImageContainer {
-    height: 210px;
-    min-width: 210px;
-    width: 210px;
+  height: 210px;
+  min-width: 210px;
+  width: 210px;
 }
 
 .main-entityHeader-container.main-entityHeader-nonWrapped {
-    min-height: 210px;
+  min-height: 210px;
 }
 
 /*increased visibility of text in playlist description*/
 .playlist-playlist-playlistDescription,
-.main-entityHeader-metaDataText span
-{
+.main-entityHeader-metaDataText span {
   color: var(--text-subdued);
 }
 
 /*adjust margin of play button*/
-.main-actionBar-ActionBar .main-playButton-PlayButton
-{
+.main-actionBar-ActionBar .main-playButton-PlayButton {
   margin-right: calc(32px + var(--playButton-width) - 56px) !important;
 
 }
 
 /*adjust size/shape of play button*/
-.main-actionBar-ActionBar .ButtonInner-lg-iconOnly
-{
-    min-block-size: 32px;
-    inline-size: var(--playButton-width);
-    block-size: 32px;
+.main-actionBar-ActionBar .ButtonInner-lg-iconOnly {
+  min-block-size: 32px;
+  inline-size: var(--playButton-width);
+  block-size: 32px;
 }
 
-.main-actionBar-ActionBar .ButtonInner-lg-iconOnly span
-{
-    position: unset !important;
+.main-actionBar-ActionBar .ButtonInner-lg-iconOnly span {
+  position: unset !important;
 }
 
-.main-playButton-PlayButton svg
-{
-  height:16px;
+.main-playButton-PlayButton svg {
+  height: 16px;
 }
 
 /*reduce height of action bar*/
-.os-content-glue{
+.os-content-glue {
   height: auto;
 }
 
-.main-actionBar-ActionBar
-{
-  padding-top:0px !important;
-  padding-bottom:0px !important;
-}  
+.main-actionBar-ActionBar {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
 
 
 
@@ -237,6 +217,7 @@
   background-color: inherit !important;
   background-image: unset !important;
 }
+
 .main-actionBarBackground-background {
   background-color: inherit !important;
   background-image: unset !important;
@@ -244,12 +225,12 @@
 
 /*remove top bar color gradient*/
 .main-topBar-background {
-background-color: var(--spice-main) !important;
+  background-color: var(--spice-main) !important;
 }
 
 /*remove sidebar divider gradient*/
 .main-rootlist-rootlistDividerGradient {
-background-image: unset !important;
+  background-image: unset !important;
 }
 
 
@@ -257,15 +238,13 @@ background-image: unset !important;
 /*** MISC ***/
 
 /*black notification text*/
-.main-notificationBubble-NotificationBubble
-{
-  color:#000000;
+.main-notificationBubble-NotificationBubble {
+  color: #000000;
   text-transform: uppercase;
 }
 
 /*darker background for Now Playing/Friend Activity sidebars*/
 .main-nowPlayingView-container,
-.main-buddyFeed-container
-{
-    background: var(--spice-sidebar);
+.main-buddyFeed-container {
+  background: var(--spice-sidebar);
 }
