@@ -133,6 +133,7 @@
 /*black notification text*/
 .main-notificationBubble-NotificationBubble
 {
+  color:#000000;
   text-transform: uppercase;
 }
 
@@ -240,4 +241,9 @@
 .main-buddyFeed-container
 {
     background: var(--spice-sidebar);
+}
+
+/*replace color of selected row*/
+.main-trackList-trackListRow.main-trackList-selected, .main-trackList-trackListRow.main-trackList-selected:hover {
+  background-color: rgba(var(--spice-rgb-new-selected-row),.3);
 }
