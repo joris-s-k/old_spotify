@@ -57,7 +57,7 @@
 }
 
 /*expand title/artist to uniform length in grid slot for all rows*/
-.main-trackList-rowSectionIndex, .main-trackList-rowSectionStart {
+.main-trackList-rowSectionStart {
     display:grid;
     width: 85%;
 }
@@ -225,4 +225,12 @@
 
 .main-trackList-trackListRow.main-trackList-dropTargetBefore:before {
   top: -2px;
+}
+
+/*adjust header position*/
+.main-trackList-trackListHeader .main-trackList-rowSectionIndex,
+.main-trackList-column.main-trackList-sortable
+{
+  position:relative;
+  top:6px;
 }
