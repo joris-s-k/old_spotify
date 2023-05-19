@@ -1,7 +1,12 @@
+/*** VARIABLES ***/
 :root{
   --playButton-width: 88px;
   --new-Rowheight: 41px;
 }
+
+
+
+/*** PLAYLIST CONTENT ***/
 
 /*hide cover image in playlists*/
 .main-trackList-rowImage
@@ -62,12 +67,6 @@
     width: 85%;
 }
 
-/*Move "Title" from center to left*/
-.main-trackList-column
-{
-  justify-content:left;
-}
-
 /*same color/font size for title/artist/album*/
 .main-trackList-rowSectionVariable a, 
 .main-trackList-rowSubTitle a {
@@ -77,33 +76,6 @@
 .main-trackList-rowTitle
 {
   font-size: 14px;
-}
-
-/*remove playlist color gradient*/
-.main-entityHeader-backgroundColor {
-    background-color: inherit !important;
-    background-image: unset !important;
-}
-.main-actionBarBackground-background {
-    background-color: inherit !important;
-    background-image: unset !important;
-}
-
-/*remove top bar color gradient*/
-.main-topBar-background {
-  background-color: var(--spice-main) !important;
-}
-
-/*smaller play button in top bar*/
-.ButtonInner-md-iconOnly {
-    min-block-size: 32px;
-    inline-size: 32px;
-    block-size: 32px;
-}
-
-.ButtonInner-md-iconOnly span
-{
-  position: unset !important;
 }
 
 /*color artist/album green on current track*/
@@ -130,16 +102,69 @@
   color: var(--spice-subtext) !important;
 }
 
-/*black notification text*/
-.main-notificationBubble-NotificationBubble
-{
-  color:#000000;
-  text-transform: uppercase;
+/*adjust position of drag&drop indicators for new row height*/
+.main-trackList-trackListRow.main-trackList-dropTargetAfter:after {
+  top: calc(var(--new-Rowheight) - 2px);
 }
 
-/*remove sidebar divider gradient*/
-.main-rootlist-rootlistDividerGradient {
-  background-image: unset !important;
+.main-trackList-trackListRow.main-trackList-dropTargetBefore:before {
+  top: -2px;
+}
+
+/*replace color of selected row*/
+.main-trackList-trackListRow.main-trackList-selected, .main-trackList-trackListRow.main-trackList-selected:hover {
+  background-color: rgba(var(--spice-rgb-new-selected-row),.3);
+}
+
+
+
+/*** PLAYLIST COLUMN HEADERS ***/
+
+/*Move "Title" from center to left*/
+.main-trackList-column
+{
+  justify-content:left;
+}
+
+/*use old font design for playlist type/column headers*/
+.main-trackList-trackListHeader span
+{
+  text-transform:uppercase !important;
+  letter-spacing:1.5px;
+  font-size:.6815rem;
+}
+
+.main-entityHeader-headerText .TypeElement-mestoBold-type:first-child
+{
+  text-transform:uppercase !important;
+  letter-spacing:1.5px;
+  font-size:.6815rem;
+  font-weight: lighter;
+}
+
+/*adjust header position*/
+.main-trackList-trackListHeader .main-trackList-rowSectionIndex,
+.main-trackList-trackListHeader .main-trackList-playsHeader,
+.main-trackList-column
+{
+  position:relative;
+  top:6px;
+}
+
+
+
+/*** PLAYLIST TITLE ***/
+
+/*smaller play button in top bar*/
+.ButtonInner-md-iconOnly {
+    min-block-size: 32px;
+    inline-size: 32px;
+    block-size: 32px;
+}
+
+.ButtonInner-md-iconOnly span
+{
+  position: unset !important;
 }
 
 /*smaller playlist title*/
@@ -201,53 +226,46 @@
 {
   padding-top:0px !important;
   padding-bottom:0px !important;
-}                                   
+}  
 
 
-/*use old font design for playlist type/column headers*/
-.main-trackList-trackListHeader span
+
+/*** GRADIENTS ***/
+
+/*remove playlist color gradient*/
+.main-entityHeader-backgroundColor {
+  background-color: inherit !important;
+  background-image: unset !important;
+}
+.main-actionBarBackground-background {
+  background-color: inherit !important;
+  background-image: unset !important;
+}
+
+/*remove top bar color gradient*/
+.main-topBar-background {
+background-color: var(--spice-main) !important;
+}
+
+/*remove sidebar divider gradient*/
+.main-rootlist-rootlistDividerGradient {
+background-image: unset !important;
+}
+
+
+
+/*** MISC ***/
+
+/*black notification text*/
+.main-notificationBubble-NotificationBubble
 {
-  text-transform:uppercase !important;
-  letter-spacing:1.5px;
-  font-size:.6815rem;
+  color:#000000;
+  text-transform: uppercase;
 }
-
-.main-entityHeader-headerText .TypeElement-mestoBold-type:first-child
-{
-  text-transform:uppercase !important;
-  letter-spacing:1.5px;
-  font-size:.6815rem;
-  font-weight: lighter;
-}
-
-/*adjust header position*/
-.main-trackList-trackListHeader .main-trackList-rowSectionIndex,
-.main-trackList-trackListHeader .main-trackList-playsHeader,
-.main-trackList-column
-{
-  position:relative;
-  top:6px;
-}
-
-/*adjust position of drag&drop indicators for new row height*/
-.main-trackList-trackListRow.main-trackList-dropTargetAfter:after {
-  top: calc(var(--new-Rowheight) - 2px);
-}
-
-.main-trackList-trackListRow.main-trackList-dropTargetBefore:before {
-  top: -2px;
-}
-
-
 
 /*darker background for Now Playing/Friend Activity sidebars*/
 .main-nowPlayingView-container,
 .main-buddyFeed-container
 {
     background: var(--spice-sidebar);
-}
-
-/*replace color of selected row*/
-.main-trackList-trackListRow.main-trackList-selected, .main-trackList-trackListRow.main-trackList-selected:hover {
-  background-color: rgba(var(--spice-rgb-new-selected-row),.3);
 }
