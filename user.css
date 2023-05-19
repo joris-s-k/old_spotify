@@ -186,6 +186,11 @@
     position: unset !important;
 }
 
+.main-playButton-PlayButton svg
+{
+  height:16px;
+}
+
 /*reduce height of action bar*/
 .os-content-glue{
   height: auto;
