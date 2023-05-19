@@ -1,3 +1,7 @@
+:root{
+  --playButton-width: 88px
+  --new-Rowheight: 41px
+}
 /*hide cover image in playlists*/
 .main-trackList-rowImage
 {
@@ -40,17 +44,18 @@
 /*reduce row height, add divider lines*/
 .main-trackList-trackListRow, .main-trackList-trackListRowGrid
 {
-  height:40px;
+  height:var(--new-Rowheight);
   border-bottom-color:#272727;
 }
 
 /*make first row appear the same height*/
 .main-trackList-trackListHeader {
-  height: 40px;
+  height: var(--new-Rowheight);
   margin-bottom: 0px;
   border-bottom: 0px;
 }
 
+/*expand title/artist to uniform length in grid slot for all rows*/
 .main-trackList-rowSectionIndex, .main-trackList-rowSectionStart {
     display:grid;
     width: 85%;
@@ -158,10 +163,6 @@
 .main-entityHeader-metaDataText span
 {
   color: var(--text-subdued);
-}
-
-:root{
-  --playButton-width: 88px
 }
 
 /*adjust margin of play button*/
