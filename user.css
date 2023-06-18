@@ -285,3 +285,7 @@
   background: var(--spice-sidebar);
 }
 
+/*move 'create playlist' button to bottom*/
+.GlueDropTarget--albums {
+  order:1;
+}
