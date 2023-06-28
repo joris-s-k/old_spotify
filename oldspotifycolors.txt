@@ -1,9 +1,0 @@
-old spotify colors:
-player: 282828
-sidebar: 121212
-main: 181818
-
-new colors are:
-"sidebar" -> colors player
-"player" -> colors area around "your mix" etc.
-"main" -> colors main and sidebar
