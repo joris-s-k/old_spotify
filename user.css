@@ -294,3 +294,10 @@
 .GlueDropTarget--albums {
   order:1;
 }
+
+/*adjust highlight color for selected items in sidebar*/
+.encore-dark-theme, .encore-dark-theme .encore-base-set {
+    --background-tinted-base: rgba(var(--spice-rgb-selected-row),.1);
+    --background-tinted-highlight: rgba(var(--spice-rgb-selected-row),.025);
+    --background-tinted-press: rgba(var(--spice-rgb-selected-row),.04);
+}
