@@ -91,6 +91,11 @@
   color: var(--spice-subtext) !important;
 }
 
+/*heart always visible*/
+.main-trackList-rowHeartButton[aria-checked=false] {
+  opacity: unset;
+}
+
 /*adjust position of drag&drop indicators for new row height*/
 .main-trackList-trackListRow.main-trackList-dropTargetAfter:after {
   top: calc(var(--new-Rowheight) - 2px);
