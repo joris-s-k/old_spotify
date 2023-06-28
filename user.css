@@ -2,6 +2,7 @@
 :root {
   --playButton-width: 88px;
   --new-Rowheight: 41px;
+  --scrollbar-vertical-size:9px !important;
 }
 
 
