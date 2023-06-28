@@ -13,3 +13,5 @@ To account for the reduced row height in playlists you need to add the following
 xpui.js_find_8008 = ,(\w+=)56,
 xpui.js_repl_8008 = ,${1}40,
 ```
+
+~~Enable "Enable Your Library X view of the left sidebar" experimental feature to get the old sidebar back~~
