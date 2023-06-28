@@ -290,7 +290,24 @@
   background: var(--spice-sidebar);
 }
 
-/*move 'create playlist' button to bottom*/
-.GlueDropTarget--albums {
-  order:1;
+/*move create playlist button to bottom (also uses js)*/
+.GlueDropTarget--albums:has(> .main-createPlaylistButton-button)
+{
+  order:1 !important;
 }
+
+/*** show cover images in playlists + fix heart in history
+.main-trackList-trackList .main-trackList-rowImage {
+  display:grid;
+}
+
+.main-trackList-trackList .main-trackList-rowSectionStart {
+  grid-template-columns:  50px auto;
+}
+
+
+.main-trackList-trackList[aria-colcount="3"] .main-trackList-rowSectionStart
+{
+  margin-left: calc(32px + 36px) !important;
+}
+*/
