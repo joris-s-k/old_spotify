@@ -277,6 +277,7 @@
 
 
 
+
 /*** MISC ***/
 
 /*black notification text*/
@@ -302,3 +303,24 @@
     --background-tinted-highlight: rgba(var(--spice-rgb-selected-row),.00);
     --background-tinted-press: rgba(var(--spice-rgb-selected-row),.04);
 }
+
+/*
+/*show cover image in playlists
+.main-trackList-trackList .main-trackList-rowImage {
+  display:grid;
+}
+
+.main-trackList-trackList .main-trackList-rowSectionStart:has(> .main-trackList-rowImage, .main-trackList-rowImageWithPlay) {
+  grid-template-columns:  50px auto;
+}
+
+/*fix heart in history
+.main-trackList-trackList[aria-colcount="3"] .main-trackList-rowSectionStart
+{
+  margin-left: calc(32px + 36px) !important;
+}
+
+.main-trackList-trackList[aria-colcount="3"]:not(.main-trackList-indexable) .main-trackList-trackListRowGrid {
+    grid-template-columns: [first] 12fr [var1] 3fr [last] minmax(80px, 0.5fr);
+}
+
