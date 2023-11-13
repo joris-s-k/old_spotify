@@ -82,9 +82,10 @@
 }
 
 .main-addButton-button.main-trackList-rowHeartButton,
-.main-addButton-button.main-trackList-rowHeartButton {
+.main-trackList-rowHeartButton {
   position: absolute !important;
   left: 48px !important;
+  color: var(--spice-subtext) !important;
 }
 
 /*grey heart*/
@@ -148,14 +149,36 @@
 /*** PLAYLIST TITLE ***/
 
 /*smaller play button in top bar*/
-.ButtonInner-md-iconOnly {
+.ButtonInner-md-iconOnly,
+.ButtonInner-medium-iconOnly
+{
   min-block-size: 32px;
   inline-size: 32px;
   block-size: 32px;
 }
 
-.ButtonInner-md-iconOnly span {
+.ButtonInner-md-iconOnly span,
+.ButtonInner-medium-iconOnly span{
   position: unset !important;
+}
+
+/*adjust size/shape of play button*/
+.main-actionBar-ActionBar .ButtonInner-lg-iconOnly,
+.main-actionBar-ActionBar .ButtonInner-large-iconOnly
+{
+  min-block-size: 32px;
+  inline-size: var(--playButton-width);
+  block-size: 32px;
+}
+
+.main-actionBar-ActionBar .ButtonInner-lg-iconOnly span,
+.main-actionBar-ActionBar .ButtonInner-large-iconOnly span
+{
+  position: unset !important;
+}
+
+.main-playButton-PlayButton svg {
+  height: 16px;
 }
 
 /*smaller playlist title*/
@@ -187,20 +210,6 @@
 
 }
 
-/*adjust size/shape of play button*/
-.main-actionBar-ActionBar .ButtonInner-lg-iconOnly {
-  min-block-size: 32px;
-  inline-size: var(--playButton-width);
-  block-size: 32px;
-}
-
-.main-actionBar-ActionBar .ButtonInner-lg-iconOnly span {
-  position: unset !important;
-}
-
-.main-playButton-PlayButton svg {
-  height: 16px;
-}
 
 /*reduce height of action bar*/
 .os-content-glue {
@@ -322,5 +331,22 @@
 
 .main-trackList-trackList[aria-colcount="3"]:not(.main-trackList-indexable) .main-trackList-trackListRowGrid {
     grid-template-columns: [first] 12fr [var1] 3fr [last] minmax(80px, 0.5fr);
+}
+
+/* sidebar width
+.Root__top-container {
+    grid-template-areas: "left-sidebar    main-view         right-sidebar" "now-playing-bar now-playing-bar now-playing-bar";
+    grid-template-columns: 2fr 10fr;
+}
+
+.Root__top-container:has(.main-yourLibraryX-libraryIsCollapsed) 
+{
+    grid-template-columns: auto 10fr;
+}
+
+.Root__nav-bar:not(:has(.main-yourLibraryX-libraryIsCollapsed))
+{
+    width: auto;
+    min-width: 280px;
 }
 
